@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Emisor
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Departamento</a></li>
+        <li><a class="dropdown-item" href="#">Dirección</a></li>
+        <li><a class="dropdown-item" href="#">Secretaria</a></li>
+        <li><a class="dropdown-item" href="#">Federación</a></li>
+    </ul>
+</div>
+
+<div class="container mt-4"">
+    <div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <!-- Seccion de Cards para enunciados -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'fede.png' %}" width="50%" height="50%" class="card-img-top" alt="Imagen 1">
+                <div class="card-body">
+                    <h5 class="card-title">{{ items }}</h5>
+                    <p class="card-text">Descripcion corta del comunicado</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'depa.png' %}" width="50%" height="50%" class="card-img-top" alt="Imagen 2">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo del comunicado</h5>
+                    <p class="card-text">Descripcion corta del comunicado</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
